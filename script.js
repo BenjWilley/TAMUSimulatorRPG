@@ -68,7 +68,7 @@ const locations = [
 		text: "You enter the Book Store."
 	},
 	{
-		name: "cave",
+		name: "",
 		"button text": ["Do Homework", "Take Quiz", "Go to Academic Building"],
 		"button functions": [fightSlime, fightBeast, goTown],
 		text: "You enter the Evans Library. You see some assignments."
@@ -81,7 +81,7 @@ const locations = [
 	},
 	{
 		name: "kill monster",
-		"button text": ["Go to town square", "Go to town square", "Go to town square"],
+		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
 		"button functions": [goTown, goTown, easterEgg],
 		text: 'The assignment screams "Arg!" as it dies. You gain hours and find dining dollars.'
 	},
