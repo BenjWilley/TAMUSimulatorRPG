@@ -59,7 +59,7 @@ const locations = [
         name: "New Student Conference",
         "button text": ["Computer Engineer(Expert)", "Business(intermediate)", "Communications(beginner)"],
         "button functions": [compE, business, comm],
-        text: "Congrats on your acceptance to Texas A&M. Choose your Major."
+        text: "Congrats on your acceptance to Texas A&M. What are you majoring in?"
     },
 
     {
@@ -109,14 +109,34 @@ const locations = [
 		"button text": ["2", "8", "Go to town square?"],
 		"button functions": [pickTwo, pickEight, goTown],
 		text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
+	},
+	{
+		name: "Computer engineering",
+		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
+		"button functions": [goTown, goTown, goTown],
+		text: 'Thats rough, You have successfully transferred into computer engineering. None of your AP credits transferred for hours, and you are left to guess and check your work until you get new supplies.'
+	},
+	{
+		name: "Businees",
+		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
+		"button functions": [goTown, goTown, goTown],
+		text: 'Congrats, you have successfully transferred into business. Some AP credits transferred for hours, and through business networking you have some class notes.'
+	},
+	{
+		name: "Communications",
+		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
+		"button functions": [goTown, goTown, goTown],
+		text: 'Wow! You have successfully transferred into Communications. All of your AP credits transferred for hours, and you have a chegg account.'
 	}
+
+
 ]
 
 
 // initialize buttons
-button1.onclick = goStore;
-button2.onclick = goCave;
-button3.onclick = fightDragon;
+button1.onclick = compE;
+button2.onclick = business;
+button3.onclick = comm;
 
 function update(location) {
     monsterStats.style.display = "none";
@@ -266,6 +286,9 @@ function lose() {
 function winGame() {
   update(locations[7]);
 }
+function compEAccept() {
+	update(locations[8]);
+  }
 
 function compE() {
 	xp = 0;
@@ -276,12 +299,14 @@ function compE() {
 	goldText.innerText = gold;
 	healthText.innerText = health;
 	xpText.innerText = xp;
-	goTown();
+	compEAccept();
 }
 function restart() {
-	
 	goNSC();
 }
+function businessAccept() {
+	update(locations[9]);
+  }
 function business() {
 	xp = 15;
 	health = 200;
@@ -291,9 +316,11 @@ function business() {
 	goldText.innerText = gold;
 	healthText.innerText = health;
 	xpText.innerText = xp;
-	goTown();
+	businessAccept();
 }
-
+function commAccept() {
+	update(locations[10]);
+  }
 function comm() {
 	xp = 30;
 	health = 300;
@@ -303,7 +330,7 @@ function comm() {
 	goldText.innerText = gold;
 	healthText.innerText = health;
 	xpText.innerText = xp;
-	goTown();
+	commAccept();
 }
 
 function easterEgg() {
