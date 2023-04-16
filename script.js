@@ -55,6 +55,13 @@ const monsters = [
 ];
 
 const locations = [
+	{
+        name: "New Student Conference",
+        "button text": ["Computer Engineer(Expert)", "Business(intermediate)", "Communications(beginner)"],
+        "button functions": [compE, business, comm],
+        text: "Congrats on your acceptance to Texas A&M. Choose your Major."
+    },
+
     {
         name: "Academic Building",
         "button text": ["Go to Book Store", "Go to Evans library", "Take Final Exam"],
@@ -68,7 +75,7 @@ const locations = [
 		text: "You enter the Book Store."
 	},
 	{
-		name: "",
+		name: "Evans Library",
 		"button text": ["Do Homework", "Take Quiz", "Go to Academic Building"],
 		"button functions": [fightSlime, fightBeast, goTown],
 		text: "You enter the Evans Library. You see some assignments."
@@ -89,7 +96,7 @@ const locations = [
 		name: "lose",
 		"button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
 		"button functions": [restart, restart, restart],
-		text: "You Fail Out. ☠️"
+		text: "You Fail Out, maybe try communications. ☠️"
 	},
 	{
 		name: "win",
@@ -122,16 +129,19 @@ function update(location) {
     text.innerText = location.text;    
 }
 
-function goTown() {
+function goNSC() {
     update(locations[0]);
 }
-
-function goStore() {
+function goTown() {
     update(locations[1]);
 }
 
-function goCave() {
+function goStore() {
     update(locations[2]);
+}
+
+function goCave() {
+    update(locations[3]);
 }
 
 function buyHealth() {
@@ -194,7 +204,7 @@ function fightDragon() {
 }
 
 function goFight() {
-    update(locations[3]);
+    update(locations[4]);
     monsterHealth = monsters[fighting].health;
     monsterStats.style.display = "block";
     monsterNameText.innerText = monsters[fighting].name;
@@ -246,23 +256,50 @@ function defeatMonster() {
     xp += monsters[fighting].level;
     goldText.innerText = gold;
 	xpText.innerText = xp;
-    update(locations[4]);
-}
-
-function lose() {
     update(locations[5]);
 }
 
-function winGame() {
-  update(locations[6]);
+function lose() {
+    update(locations[6]);
 }
 
-function restart() {
+function winGame() {
+  update(locations[7]);
+}
+
+function compE() {
 	xp = 0;
 	health = 100;
 	gold = 50;
 	currentWeapon = 0;
 	inventory = ["Guess and Check"];
+	goldText.innerText = gold;
+	healthText.innerText = health;
+	xpText.innerText = xp;
+	goTown();
+}
+function restart() {
+	
+	goNSC();
+}
+function business() {
+	xp = 15;
+	health = 200;
+	gold = 50;
+	currentWeapon = 1;
+	inventory = ["Guess and Check","Notes"];
+	goldText.innerText = gold;
+	healthText.innerText = health;
+	xpText.innerText = xp;
+	goTown();
+}
+
+function comm() {
+	xp = 30;
+	health = 300;
+	gold = 100000;
+	currentWeapon = 3;
+	inventory = ["Guess and Check", "Notes", "TI 84","Chegg"];
 	goldText.innerText = gold;
 	healthText.innerText = health;
 	xpText.innerText = xp;
