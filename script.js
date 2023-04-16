@@ -1,10 +1,10 @@
 let xp = 0;
-let health = 4;
+let health = 100;
 let gold = 50;
 let currentWeapon = 0;
 let fighting;
 let monterHealth;
-let inventory = ["stick"];
+let inventory = ["Guess and Check"];
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
