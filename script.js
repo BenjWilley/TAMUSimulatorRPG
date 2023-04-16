@@ -1,5 +1,5 @@
 let xp = 0;
-let health = 100;
+let health = 4;
 let gold = 50;
 let currentWeapon = 0;
 let fighting;
@@ -19,36 +19,36 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 
 const weapons = [
 	{
-		name: "stick",
+		name: "Guess and Check",
 		power: 5
 	},
 	{
-		name: "dagger",
+		name: "Notes",
 		power: 30
 	},
 	{
-		name: "claw hammer",
+		name: "TI 84",
 		power: 50
 	},
 	{
-		name: "sword",
+		name: "Chegg",
 		power: 100
 	}
 ];
 
 const monsters = [
   {
-    name: "slime",
+    name: "Home Work",
     level: 2,
     health: 15
   },
   {
-    name: "fanged beast",
+    name: "Quiz",
     level: 8,
     health: 60
   },
   {
-    name: "dragon",
+    name: "Final Exam",
     level: 20,
     health: 300
   }
@@ -56,46 +56,46 @@ const monsters = [
 
 const locations = [
     {
-        name: "town square",
-        "button text": ["Go to store", "Go to cave", "Fight dragon"],
+        name: "Academic Building",
+        "button text": ["Go to Book Store", "Go to Evans library", "Take Final Exam"],
         "button functions": [goStore, goCave, fightDragon],
-        text: "You are in the town square. You see a sign that says \"Store.\""
+        text: "You are in the Academic Building. You see a sign that says \"Book Store.\""
     },
 	{
-		name: "store",
-		"button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+		name: "Book Store",
+		"button text": ["Buy 10 GPA points (10 dining dollars)", "upgrade school supplies (30 dining dollars)", "Go to Academic Building"],
 		"button functions": [buyHealth, buyWeapon, goTown],
-		text: "You enter the store."
+		text: "You enter the Book Store."
 	},
 	{
 		name: "cave",
-		"button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+		"button text": ["Do Homework", "Take Quiz", "Go to Academic Building"],
 		"button functions": [fightSlime, fightBeast, goTown],
-		text: "You enter the cave. You see some monsters."
+		text: "You enter the Evans Library. You see some assignments."
 	},
 	{
 		name: "fight",
-		"button text": ["Attack", "Dodge", "Run"],
+		"button text": ["Attack", "Procrastinate", "Doctors Note(Run Away)"],
 		"button functions": [attack, dodge, goTown],
-		text: "You are fighting a monster."
+		text: "You are taking an assignment."
 	},
 	{
 		name: "kill monster",
 		"button text": ["Go to town square", "Go to town square", "Go to town square"],
 		"button functions": [goTown, goTown, easterEgg],
-		text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
+		text: 'The assignment screams "Arg!" as it dies. You gain hours and find dining dollars.'
 	},
 	{
 		name: "lose",
 		"button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
 		"button functions": [restart, restart, restart],
-		text: "You die. ☠️"
+		text: "You Fail Out. ☠️"
 	},
 	{
 		name: "win",
 		"button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
 		"button functions": [restart, restart, restart],
-		text: "You defeat the dragon! YOU WIN THE GAME! 🎉"
+		text: "You aced the Final! YOU WIN THE GAME! 🎉"
     },
 	{
 		name: "easter egg",
@@ -141,7 +141,7 @@ function buyHealth() {
         goldText.innerText = gold;
     	healthText.innerText = health;       
     } else {
-        text.innerText = "You do not have enough gold to buy health.";
+        text.innerText = "You do not have enough dining dollars to buy GPA.";
     }
 
 }
@@ -157,11 +157,11 @@ function buyWeapon() {
             inventory.push(newWeapon);
             text.innerText += " In your inventory you have: " + inventory;
     	} else {
-    		text.innerText = "You do not have enough gold to buy a weapon.";
+    		text.innerText = "You do not have enough dining dollars to upgrade supplies.";
     	} 
     } else {
-		text.innerText = "You already have the most powerful weapon!";
-        button2.innerText = "Sell weapon for 15 gold";
+		text.innerText = "You already have chegg, the most powerful weapon!";
+        button2.innerText = "Sell supplies for 15 dining dollars?";
 		button2.onclick = sellWeapon;
 	}
 }
@@ -174,7 +174,7 @@ function sellWeapon() {
         text.innerText = "You sold a " + currentWeapon + ".";
         text.innerText += " In your inventory you have: " + inventory;
 	} else {
-    	text.innerText = "Don't sell your only weapon!";
+    	text.innerText = "Don't sell your only supplies!";
   	}
 }
 
@@ -238,7 +238,7 @@ function isMonsterHit() {
 
 
 function dodge() {
-    text.innerText = "You dodge the attack from the " + monsters[fighting].name + ".";
+    text.innerText = "You procrastinate the due date of the " + monsters[fighting].name + ".";
 }
 
 function defeatMonster() {
@@ -262,7 +262,7 @@ function restart() {
 	health = 100;
 	gold = 50;
 	currentWeapon = 0;
-	inventory = ["stick"];
+	inventory = ["Guess and Check"];
 	goldText.innerText = gold;
 	healthText.innerText = health;
 	xpText.innerText = xp;
@@ -294,11 +294,11 @@ function pick(guess) {
     }
 
     if (numbers.indexOf(guess) !== -1) {
-        text.innerText += "Right! You win 20 gold!"
+        text.innerText += "Right! You win 20 dining dollars!"
         gold += 20;
         goldText.innerText = gold;
     } else {
-        text.innerText += "Wrong! You lose 10 health!"
+        text.innerText += "Wrong! You lose 10 GPA!"
         health -= 10;
         healthText.innerText = health
         if (health <= 0) {
