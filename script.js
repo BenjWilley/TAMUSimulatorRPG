@@ -287,7 +287,7 @@ function winGame() {
   update(locations[7]);
 }
 function compEAccept() {
-	update(locations[8]);
+	update(locations[9]);
   }
 
 function compE() {
@@ -305,7 +305,7 @@ function restart() {
 	goNSC();
 }
 function businessAccept() {
-	update(locations[9]);
+	update(locations[10]);
   }
 function business() {
 	xp = 15;
@@ -319,7 +319,7 @@ function business() {
 	businessAccept();
 }
 function commAccept() {
-	update(locations[10]);
+	update(locations[11]);
   }
 function comm() {
 	xp = 30;
@@ -334,7 +334,7 @@ function comm() {
 }
 
 function easterEgg() {
-	update(locations[7]);
+	update(locations[8]);
 }
 
 function pickTwo() {
