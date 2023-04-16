@@ -90,7 +90,7 @@ const locations = [
 		name: "kill monster",
 		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
 		"button functions": [goTown, goTown, easterEgg],
-		text: 'The assignment screams "Arg!" as it dies. You gain hours and find dining dollars.'
+		text: 'The assignment is turned in at 11:59PM, it cant hurt you anymore. You gain hours and find dining dollars.'
 	},
 	{
 		name: "lose",
@@ -106,7 +106,7 @@ const locations = [
     },
 	{
 		name: "easter egg",
-		"button text": ["2", "8", "Go to town square?"],
+		"button text": ["2", "8", "Go to Academic Building"],
 		"button functions": [pickTwo, pickEight, goTown],
 		text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
 	},
@@ -114,19 +114,19 @@ const locations = [
 		name: "Computer engineering",
 		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
 		"button functions": [goTown, goTown, goTown],
-		text: 'Thats rough, You have successfully transferred into computer engineering. None of your AP credits transferred for hours, and you are left to guess and check your work until you get new supplies.'
+		text: 'Thats rough, You have successfully transferred into computer engineering. You are at rock bottom. None of your AP credits transferred, and you have no supplies.'
 	},
 	{
 		name: "Businees",
 		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
 		"button functions": [goTown, goTown, goTown],
-		text: 'Congrats, you have successfully transferred into business. Some AP credits transferred for hours, and through business networking you have some class notes.'
+		text: 'Congrats, you have successfully transferred into business. Some AP credits transferred for hours. Networking with some finance bros at the golf course, you recieved class notes. These will come in handy.'
 	},
 	{
 		name: "Communications",
 		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
 		"button functions": [goTown, goTown, goTown],
-		text: 'Wow! You have successfully transferred into Communications. All of your AP credits transferred for hours, and you have a trusty TI 84.'
+		text: 'Wow! You have successfully transferred into Communications. All of your AP credits transferred for hours, and you start with a powerful tool, a TI 84.'
 	}
 
 
