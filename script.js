@@ -126,7 +126,7 @@ const locations = [
 		name: "Communications",
 		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
 		"button functions": [goTown, goTown, goTown],
-		text: 'Wow! You have successfully transferred into Communications. All of your AP credits transferred for hours, and you have a chegg account.'
+		text: 'Wow! You have successfully transferred into Communications. All of your AP credits transferred for hours, and you have a trusty TI 84.'
 	}
 
 
@@ -292,8 +292,8 @@ function compEAccept() {
 
 function compE() {
 	xp = 0;
-	health = 100;
-	gold = 50;
+	health = 75;
+	gold = 25;
 	currentWeapon = 0;
 	inventory = ["Guess and Check"];
 	goldText.innerText = gold;
@@ -308,8 +308,8 @@ function businessAccept() {
 	update(locations[10]);
   }
 function business() {
-	xp = 15;
-	health = 200;
+	xp = 7;
+	health = 100;
 	gold = 50;
 	currentWeapon = 1;
 	inventory = ["Guess and Check","Notes"];
@@ -322,11 +322,11 @@ function commAccept() {
 	update(locations[11]);
   }
 function comm() {
-	xp = 30;
-	health = 300;
-	gold = 100000;
-	currentWeapon = 3;
-	inventory = ["Guess and Check", "Notes", "TI 84","Chegg"];
+	xp = 14;
+	health = 125;
+	gold = 125;
+	currentWeapon = 2;
+	inventory = ["Guess and Check", "Notes", "TI 84"];
 	goldText.innerText = gold;
 	healthText.innerText = health;
 	xpText.innerText = xp;
