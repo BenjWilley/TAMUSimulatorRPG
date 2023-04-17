@@ -66,13 +66,13 @@ const locations = [
         name: "Academic Building",
         "button text": ["Go to Book Store", "Go to Evans library", "Take Final Exam"],
         "button functions": [goStore, goCave, fightDragon],
-        text: "You are in the Academic Building. You see a sign that says \"Book Store.\""
+        text: "You are in the Academic Building. You see signs that says \"Book Store\" and \"Evans Library.\""
     },
 	{
 		name: "Book Store",
 		"button text": ["Buy 10 GPA points (10 dining dollars)", "upgrade school supplies (30 dining dollars)", "Go to Academic Building"],
 		"button functions": [buyHealth, buyWeapon, goTown],
-		text: "You enter the Book Store."
+		text: "You enter the University Book Store. Everything is overpriced, but it seems they have a monopoly."
 	},
 	{
 		name: "Evans Library",
