@@ -84,13 +84,13 @@ const locations = [
 		name: "fight",
 		"button text": ["Attack", "Procrastinate", "Doctors Note(Run Away)"],
 		"button functions": [attack, dodge, goTown],
-		text: "You are taking an assignment."
+		text: "A wild assignment appears!"
 	},
 	{
 		name: "kill monster",
 		"button text": ["Go to Academic Building", "Go to Academic Building", "Go to Academic Building"],
 		"button functions": [goTown, goTown, easterEgg],
-		text: 'The assignment is turned in at 11:59PM, it cant hurt you anymore. You gain hours and find dining dollars.'
+		text: 'You pass the assignment. You gain hours and find dining dollars.'
 	},
 	{
 		name: "lose",
