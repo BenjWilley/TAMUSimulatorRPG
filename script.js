@@ -84,7 +84,7 @@ const locations = [
 		name: "fight",
 		"button text": ["Attack", "Procrastinate", "Doctors Note(Run Away)"],
 		"button functions": [attack, dodge, goTown],
-		text: "A wild assignment appears!"
+		text: "A wild assignment appears! What will you do?"
 	},
 	{
 		name: "kill monster",
