@@ -66,7 +66,7 @@ const locations = [
         name: "Academic Building",
         "button text": ["Go to Book Store", "Go to Evans library", "Take Final Exam"],
         "button functions": [goStore, goCave, fightDragon],
-        text: "You are in the Academic Building. You see signs that says \"Book Store\" and \"Evans Library.\" Beware of the final, many freshman drop out from its difficulty."
+        text: "You are in the Academic Building. You see signs that say \"Book Store\" and \"Evans Library.\" Beware of the final, pass it and graduate, fail it and flunk out."
     },
 	{
 		name: "Book Store",
